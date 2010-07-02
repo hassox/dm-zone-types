@@ -1,0 +1,6 @@
+gem_name "dm-zone-types"
+
+use_color true
+
+version_file 'lib/dm-zone-types/version.rb'
+changelog_file "CHANGELOG"
