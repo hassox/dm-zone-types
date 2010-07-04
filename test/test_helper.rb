@@ -18,6 +18,5 @@ DataMapper.setup(:default, 'sqlite::memory:')
 class SpecModel
   include DataMapper::Resource
   property :id, Serial
-
   property :zoned_time, ZonedTime
 end

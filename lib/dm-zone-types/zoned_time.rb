@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'dm-zone-types'
 
 module DataMapper
@@ -23,7 +24,7 @@ module DataMapper
         when ::Time
           value.in_time_zone
         when ::Date
-          value.to_datetime.in_time_zone
+          value.to_time.in_time_zone
         when ActiveSupport::TimeWithZone
           value.in_time_zone
         when NilClass
