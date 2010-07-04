@@ -13,5 +13,6 @@ group :development do
   gem 'dm-sqlite-adapter'
   gem 'dm-migrations'
   gem 'i18n'
+  gem 'dm-validations'
 end
 

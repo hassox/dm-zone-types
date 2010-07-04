@@ -7,7 +7,7 @@ module DataMapper
       include DataMapper::Zone::Types
 
       def load(value)
-        value.in_time_zone(::Time.zone)
+        value.nil? ? nil : value.in_time_zone(::Time.zone)
       end
 
       def dump(value)

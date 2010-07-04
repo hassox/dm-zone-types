@@ -9,6 +9,7 @@ $:.unshift( File.join(File.expand_path(File.dirname(__FILE__)), "..", "lib"))
 
 require 'dm-zone-types'
 require 'dm-migrations'
+require 'dm-validations'
 
 include Nanotest
 include Nanotest::Contexts
@@ -18,5 +19,5 @@ DataMapper.setup(:default, 'sqlite::memory:')
 class SpecModel
   include DataMapper::Resource
   property :id, Serial
-  property :zoned_time, ZonedTime
+  property :zoned_time, ZonedTime, :required => false
 end

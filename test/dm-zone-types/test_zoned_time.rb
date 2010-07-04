@@ -25,6 +25,14 @@ context do
             SpecModel.new.zoned_time.must == nil
           end
 
+
+          test do
+            model = SpecModel.new
+            model.save
+            model.new?.must == false
+            model.zoned_time.must == nil
+          end
+
           # should typecast to a DateTime from a string
           test do
             model = SpecModel.new(:zoned_time => "2009-12-13 12:13:14")

@@ -4,6 +4,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  dm-validations: 
+    group: 
+    - :development
+    version: ">= 0"
   rake: 
     group: 
     - :development
@@ -12,13 +16,13 @@ dependencies:
     group: 
     - :development
     version: ">= 0"
-  watchr: 
-    group: 
-    - :development
-    version: ">= 0"
   dm-core: 
     group: 
     - :default
+    version: ">= 0"
+  watchr: 
+    group: 
+    - :development
     version: ">= 0"
   nanotest_extensions: 
     group: 
@@ -28,11 +32,15 @@ dependencies:
     group: 
     - :development
     version: ">= 0"
+  nanotest: 
+    group: 
+    - :development
+    version: ">= 0"
   i18n: 
     group: 
     - :development
     version: ">= 0"
-  nanotest: 
+  dm-migrations: 
     group: 
     - :development
     version: ">= 0"
@@ -40,10 +48,6 @@ dependencies:
     group: 
     - :default
     version: ">= 3.0.0.beta3"
-  dm-migrations: 
-    group: 
-    - :development
-    version: ">= 0"
 specs: 
 - rake: 
     version: 0.8.7
@@ -71,6 +75,8 @@ specs:
     version: 0.10.2
 - dm-sqlite-adapter: 
     version: 1.0.0
+- dm-validations: 
+    version: 1.0.0
 - i18n: 
     version: 0.4.1
 - json: 
@@ -91,7 +97,7 @@ specs:
     version: 0.3.22
 - watchr: 
     version: "0.6"
-hash: 9d371af4c0abbf9dd0cff9cf922f7448268590cc
+hash: 70f186d5e2b963e6e35c4ade89ccbd628b30ebca
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
