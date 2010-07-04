@@ -1,0 +1,97 @@
+--- 
+dependencies: 
+  tzinfo: 
+    group: 
+    - :default
+    version: ">= 0"
+  rake: 
+    group: 
+    - :development
+    version: ">= 0"
+  tumbler: 
+    group: 
+    - :development
+    version: ">= 0"
+  watchr: 
+    group: 
+    - :development
+    version: ">= 0"
+  dm-core: 
+    group: 
+    - :default
+    version: ">= 0"
+  nanotest_extensions: 
+    group: 
+    - :development
+    version: ">= 0"
+  dm-sqlite-adapter: 
+    group: 
+    - :development
+    version: ">= 0"
+  i18n: 
+    group: 
+    - :development
+    version: ">= 0"
+  nanotest: 
+    group: 
+    - :development
+    version: ">= 0"
+  activesupport: 
+    group: 
+    - :default
+    version: ">= 3.0.0.beta3"
+  dm-migrations: 
+    group: 
+    - :development
+    version: ">= 0"
+specs: 
+- rake: 
+    version: 0.8.7
+- activesupport: 
+    version: 3.0.0.beta4
+- addressable: 
+    version: 2.1.2
+- blockenspiel: 
+    version: 0.4.1
+- bundler: 
+    version: 0.9.26
+- callsite: 
+    version: 0.0.2
+- data_objects: 
+    version: 0.10.2
+- extlib: 
+    version: 0.9.15
+- dm-core: 
+    version: 1.0.0
+- dm-do-adapter: 
+    version: 1.0.0
+- dm-migrations: 
+    version: 1.0.0
+- do_sqlite3: 
+    version: 0.10.2
+- dm-sqlite-adapter: 
+    version: 1.0.0
+- i18n: 
+    version: 0.4.1
+- json: 
+    version: 1.4.3
+- nanotest: 
+    version: 0.9.4.1
+- nanotest_extensions: 
+    version: 0.6.3
+- rainbow: 
+    version: "1.1"
+- thor: 
+    version: 0.13.7
+- versionomy: 
+    version: 0.4.0
+- tumbler: 
+    version: 0.0.16
+- tzinfo: 
+    version: 0.3.22
+- watchr: 
+    version: "0.6"
+hash: 9d371af4c0abbf9dd0cff9cf922f7448268590cc
+sources: 
+- Rubygems: 
+    uri: http://gemcutter.org

@@ -10,14 +10,14 @@ Gem::Specification.new do |s|
   s.rubyforge_project = tumbler.name
   s.authors = ["Daniel Neighman"]
   s.date = tumbler.date
-  s.description = %q{Description}
+  s.description = %q{Timezone aware datatypes for DataMapper}
   s.email = "has.sox@gmail.com"
   s.files = tumbler.files
-  # s.homepage = %q{http://github.com/hassox/dm-zone-types}
+  s.homepage = %q{http://github.com/hassox/dm-zone-types}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{This is awesome.}
+  s.summary = %q{Timezone aware datatypes for DataMapper}
   s.test_files = tumbler.files(/^test/)
 
   # dependencies
