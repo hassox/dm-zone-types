@@ -6,8 +6,9 @@ module DataMapper
     class ZonedTime < Time
       include DataMapper::Zone::Types
 
-      def valid?(value)
-        value.kind_of?(::Time) || value.nil?
+      def valid?(value, negated = false)
+        response = value.kind_of?(::Time) || value.nil? || value.kind_of?(::Range)
+        negated ? !response : response
       end
 
       def load(value)
@@ -16,23 +17,28 @@ module DataMapper
 
       def dump(value)
         return nil unless value
-        time_with_zone_to_primitive value.in_time_zone(DataMapper::Zone::Types.storage_zone)
+        zone = DataMapper::Zone::Types.storage_zone
+        if value.respond_to?(:in_time_zone)
+          time_with_zone_to_primitive value.in_time_zone(zone)
+        elsif ::Range === value
+          if value.first.respond_to?(:in_time_zone) && value.last.respond_to?(:in_time_zone)
+            ((time_with_zone_to_primitive(value.first.in_time_zone(zone)))..(time_with_zone_to_primitive(value.last.in_time_zone(zone))))
+          else
+            value
+          end
+        else
+          value
+        end
       end
 
       def typecast(value)
         case value
         when ::String
           ::Time.zone.parse(value)
-        when ::DateTime
-          value.in_time_zone
-        when ::Time
-          value.in_time_zone
         when ::Date
           value.to_time.in_time_zone
-        when ActiveSupport::TimeWithZone
-          value.in_time_zone
-        when NilClass
-          nil
+        else
+          value.respond_to?(:in_time_zone) ? value.in_time_zone : value
         end
       end
 

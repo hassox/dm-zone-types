@@ -85,11 +85,27 @@ context do
             model.zoned_time.zone.must == t.zone
           end
 
-          # should typecast to a DateTime from a date
+          # should let me search for models within a range
           test do
-            d = Date.today
-            model = SpecModel.new(:zoned_time => d)
-            assert { model.zoned_time.kind_of?(ActiveSupport::TimeWithZone) }
+            t = Time.zone.now
+            [0,1,2,3,4,5].each do |d|
+              SpecModel.create(:zoned_time => (t - d.days))
+            end
+
+            results = SpecModel.all(:zoned_time => ((t - 2.days)..t))
+            results.size.must == 3
+          end
+
+          # Allow searching between dates
+          test do
+            t2 = Date.today
+            t1 = t2 - 3
+            [0,1,2,3,4,5].each do |d|
+              SpecModel.create(:zoned_time => (t2 - d.days))
+            end
+
+            results = SpecModel.all(:zoned_time => (t1..t2))
+            results.size.must == 4
           end
         end
       end # tz's

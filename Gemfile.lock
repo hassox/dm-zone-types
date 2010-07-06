@@ -4,6 +4,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  ruby-debug: 
+    group: 
+    - :default
+    version: ">= 0"
   dm-validations: 
     group: 
     - :development
@@ -61,6 +65,8 @@ specs:
     version: 0.9.26
 - callsite: 
     version: 0.0.2
+- columnize: 
+    version: 0.3.1
 - data_objects: 
     version: 0.10.2
 - extlib: 
@@ -81,12 +87,18 @@ specs:
     version: 0.4.1
 - json: 
     version: 1.4.3
+- linecache: 
+    version: "0.43"
 - nanotest: 
     version: 0.9.4.1
 - nanotest_extensions: 
     version: 0.6.3
 - rainbow: 
     version: "1.1"
+- ruby-debug-base: 
+    version: 0.10.3
+- ruby-debug: 
+    version: 0.10.3
 - thor: 
     version: 0.13.7
 - versionomy: 
@@ -97,7 +109,7 @@ specs:
     version: 0.3.22
 - watchr: 
     version: "0.6"
-hash: 70f186d5e2b963e6e35c4ade89ccbd628b30ebca
+hash: 0b6c03727c1a61fac9b2854abc49cfc189b6c3bc
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

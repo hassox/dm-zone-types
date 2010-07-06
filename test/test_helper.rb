@@ -10,6 +10,7 @@ $:.unshift( File.join(File.expand_path(File.dirname(__FILE__)), "..", "lib"))
 require 'dm-zone-types'
 require 'dm-migrations'
 require 'dm-validations'
+require 'active_support/time'
 
 include Nanotest
 include Nanotest::Contexts
