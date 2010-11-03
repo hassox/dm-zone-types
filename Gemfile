@@ -3,7 +3,6 @@ source :rubygems
   gem 'dm-core'
   gem 'activesupport', '>=3.0.0.beta3'
   gem 'tzinfo'
-  gem 'ruby-debug'
 
 group :development do
   gem "tumbler", ">= 0"
