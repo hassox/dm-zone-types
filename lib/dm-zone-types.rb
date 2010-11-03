@@ -1,5 +1,3 @@
-require 'dm-zone-types/version'
-
 require 'active_support/core_ext/time/zones'
 require 'active_support/core_ext/time/calculations'
 require 'active_support/core_ext/time/conversions'
