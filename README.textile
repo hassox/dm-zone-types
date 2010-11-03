@@ -4,11 +4,11 @@ Provides time zone aware data types for data mapper.
 
 Whenver the property is set, it will be typecast to the Time.zone set in active support and be stored in the database as the timezone set in DataMapper::Zone::Types.storage_zone
 
-%h2. Installation
+h2. Installation
 
 <pre><code>gem install dm-zone-types</code></pre>
 
-%h2. Usage
+h2. Usage
 
 <pre><code>
 require 'dm-zone-types'
