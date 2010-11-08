@@ -1,12 +1,12 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name = 'dm-zone-types'
-  s.version = '0.2'
+  s.version = '0.3'
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Neighman"]
   s.description = %q{Timezone aware datatypes for DataMapper}
   s.email = "has.sox@gmail.com"
-  s.files = Dir.glob("{test,lib}/**/*.rb") + 
+  s.files = Dir.glob("{test,lib}/**/*.rb") +
             %w(Gemfile Gemfile.lock README.textile CHANGELOG Rakefile)
   s.homepage = %q{http://github.com/hassox/dm-zone-types}
   s.rdoc_options = ["--charset=UTF-8"]
