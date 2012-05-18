@@ -8,7 +8,7 @@ module DataMapper
 
       def valid?(value, negated = false)
         response = value.kind_of?(::Time) || value.nil? || value.kind_of?(::Range)
-        negated ? !response : response
+        negated || response
       end
 
       def load(value)
